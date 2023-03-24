@@ -1,10 +1,10 @@
 import React from 'react';
-import Counter from "./chap08/Counter";
+import Info from "./chap08/Info";
 
 const App = () => {
     return (
         <div>
-            <Counter/>
+            <Info/>
         </div>
     );
 };
