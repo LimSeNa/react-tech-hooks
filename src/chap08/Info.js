@@ -3,8 +3,13 @@ import React, {useEffect, useState} from 'react';
 const Info = () => {
     const [name, setName] = useState('');
     const [nickname, setNickname] = useState('');
-    useEffect(()=>{
-        console.log(name + '(으)로 업데이트 되었습니다.');
+    useEffect(() => {
+        console.log('effect');
+        console.log(name);
+        return () => {
+            console.log('cleanup');
+            console.log(name);
+        };
     }, [name]);
 
     const onChangeName = e => {
